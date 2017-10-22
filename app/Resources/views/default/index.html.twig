@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+  {% if msg %}
+  <p class="success-msg">
+    Thank you for getting in touch!
+  </p>
+  {% endif %}
+
+	{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+	{{ form(form) }}
+  {% endif %}
+  
+{% endblock %}
+
+
